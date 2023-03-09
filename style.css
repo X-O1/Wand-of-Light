@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto;
+    height: 100vh;
+}
+
+.block-container {
+    width: 300px;
+    height: 500px;
+    padding: 0px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: 5%;
+    height: 3%;
+    border-radius: 2px;
+    background-color: #87CEFA;
+    margin: 0px;
+    padding: 0;
+    cursor: pointer;
+}
