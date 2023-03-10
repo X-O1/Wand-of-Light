@@ -1,6 +1,5 @@
 const blockContainer = document.getElementById("blockContainer");
 const blockElement = document.querySelectorAll(".block");
-
 const colors = [
   "linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)",
   "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)",
@@ -16,22 +15,20 @@ const colors = [
   "linear-gradient(60deg, #abecd6 0%, #fbed96 100%)",
   "linear-gradient(to top, #209cff 0%, #68e0cf 100%)",
   "linear-gradient(to top, #b3ffab 0%, #12fff7 100%)",
-  "linear-gradient(to right, #0acffe 0%, #495aff 100%)"
+  "linear-gradient(to right, #0acffe 0%, #495aff 100%)",
 ];
-
 blockElement.forEach((block) => {
   block.addEventListener("mouseenter", () => {
+    block.innerText = "";
+    block.style.opacity = "1";
+    block.style.transition = "opacity";
     const randomNumber = Math.floor(Math.random() * colors.length);
     block.style.backgroundImage = colors[randomNumber];
-    block.style.opacity = '1';
-    block.style.transition = 'opacity';
   });
   block.addEventListener("mouseleave", () => {
-    block.style.opacity = '0';
-    block.style.transition = 'opacity 1000ms';
-
+    block.style.opacity = "0";
+    block.style.transition = "opacity 1000ms";
     const randomNumber = Math.floor(Math.random() * colors.length);
     block.style.backgroundImage = colors[randomNumber];
-
   });
 });

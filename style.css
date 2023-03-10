@@ -1,5 +1,4 @@
 body {
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,28 +6,26 @@ body {
     padding: 0;
     margin: auto;
     height: 100vh;
+    background-color: black;
 }
 
 .block-container {
-    /* width: 325px;
-    height: 525px; */
-    width: 100%;
+    width: 500px;
     height: 100%;
-    padding: 0px 0px 10px;
     background-color: black;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
-    /* border: 5px ridge #ADFF2F; */
+    margin: 0px auto;
+
 }
 
 .block {
-    width: 40px;
-    height: 40px;
+    width: 39px;
+    height: 39px;
     border-radius: 100px;
     cursor: pointer;
     background-image: none;
     opacity: 0;
-
-
+    margin: auto;
 }
