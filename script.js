@@ -11,17 +11,27 @@ const colors = [
   "linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%)",
   "linear-gradient(to right, #f83600 0%, #f9d423 100%)",
   "linear-gradient(to top, #f77062 0%, #fe5196 100%)",
-  "linear-gradient(to top, #4481eb 0%, #04befe 100%)", 'linear-gradient(to right, #f83600 0%, #f9d423 100%)', 'linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%)', 'linear-gradient(60deg, #abecd6 0%, #fbed96 100%)', 'linear-gradient(to top, #209cff 0%, #68e0cf 100%)', 'linear-gradient(to top, #b3ffab 0%, #12fff7 100%)', 'linear-gradient(to right, #0acffe 0%, #495aff 100%)'
+  "linear-gradient(to top, #4481eb 0%, #04befe 100%)",
+  "linear-gradient(to right, #f83600 0%, #f9d423 100%)",
+  "linear-gradient(60deg, #abecd6 0%, #fbed96 100%)",
+  "linear-gradient(to top, #209cff 0%, #68e0cf 100%)",
+  "linear-gradient(to top, #b3ffab 0%, #12fff7 100%)",
+  "linear-gradient(to right, #0acffe 0%, #495aff 100%)"
 ];
-
 
 blockElement.forEach((block) => {
   block.addEventListener("mouseenter", () => {
     const randomNumber = Math.floor(Math.random() * colors.length);
     block.style.backgroundImage = colors[randomNumber];
+    block.style.opacity = '1';
+    block.style.transition = 'opacity';
   });
   block.addEventListener("mouseleave", () => {
+    block.style.opacity = '0';
+    block.style.transition = 'opacity 1000ms';
+
     const randomNumber = Math.floor(Math.random() * colors.length);
     block.style.backgroundImage = colors[randomNumber];
+
   });
 });
